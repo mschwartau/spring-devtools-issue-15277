@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      comment: Create some example table
+      id: 1
+      author: mgawritschkow
+      changes:
+        - createTable:
+            tableName: t_example
+            columns:
+              - column:
+                  name: id
+                  remarks: PK
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
